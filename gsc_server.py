@@ -15,6 +15,8 @@ from googleapiclient.errors import HttpError
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("gsc-server")
+import os
+# (this import may already exist at the top)
 
 # Path to your service account JSON or user credentials JSON
 # First check if GSC_CREDENTIALS_PATH environment variable is set
@@ -1462,6 +1464,8 @@ Amin combines technical SEO knowledge with programming skills to create innovati
 if __name__ == "__main__":
     # Start the MCP server on stdio transport
     import os
-port = int(os.environ.get("PORT", 8080))
-mcp.run(transport="sse", host="0.0.0.0", port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    mcp.run(transport="sse", host="0.0.0.0", port=port)
+
 
