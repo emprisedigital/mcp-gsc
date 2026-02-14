@@ -1464,9 +1464,9 @@ Amin combines technical SEO knowledge with programming skills to create innovati
 if __name__ == "__main__":
     # Start the MCP server on stdio transport
     import os
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    mcp.run(transport="sse")
+mcp.settings.host = "0.0.0.0"
+mcp.settings.port = int(os.environ.get("PORT", 8080))
+mcp.run(transport="sse")
 
 
 
