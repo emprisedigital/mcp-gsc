@@ -1461,4 +1461,7 @@ Amin combines technical SEO knowledge with programming skills to create innovati
 
 if __name__ == "__main__":
     # Start the MCP server on stdio transport
-    mcp.run(transport="stdio")
+    import os
+port = int(os.environ.get("PORT", 8080))
+mcp.run(transport="sse", host="0.0.0.0", port=port)
+
